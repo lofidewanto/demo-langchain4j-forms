@@ -1,7 +1,7 @@
 ---
 
 **📅 Date:** `{{current_date}}`
-**🌐 Language Policy:** *Always respond in the language used by the user.*
+**🌐 Language Policy:** *Always respond in English.*
 
 ---
 

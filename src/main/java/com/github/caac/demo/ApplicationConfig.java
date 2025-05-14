@@ -68,49 +68,7 @@ public class ApplicationConfig {
     }
 
     @Bean
-    OllamaChatModel protectorOllamaChatModel(
-            @Value("${langchain4j.ollama.chat-model.protector.base-url}") String baseUrl,
-            @Value("${langchain4j.ollama.chat-model.protector.model-name}") String modelName,
-            @Value("${langchain4j.ollama.chat-model.protector.log-requests}") boolean logRequests,
-            @Value("${langchain4j.ollama.chat-model.protector.log-responses}") boolean logResponses,
-            @Value("${langchain4j.ollama.chat-model.protector.temperature}") double temperature) {
-        return OllamaChatModel.builder()
-                .baseUrl(baseUrl)
-                .modelName(modelName)
-                .logRequests(logRequests)
-                .logResponses(logResponses)
-                .temperature(temperature)
-                .build();
-    }
-
-    @Bean
-    OllamaChatModel textCreatorOllamaChatModel(
-            @Value("${langchain4j.ollama.chat-model.textcreator.base-url}") String baseUrl,
-            @Value("${langchain4j.ollama.chat-model.textcreator.model-name}") String modelName,
-            @Value("${langchain4j.ollama.chat-model.textcreator.log-requests}") boolean logRequests,
-            @Value("${langchain4j.ollama.chat-model.textcreator.log-responses}") boolean logResponses,
-            @Value("${langchain4j.ollama.chat-model.textcreator.temperature}") double temperature) {
-        return OllamaChatModel.builder()
-                .baseUrl(baseUrl)
-                .modelName(modelName)
-                .logRequests(logRequests)
-                .logResponses(logResponses)
-                .temperature(temperature)
-                .build();
-    }
-
-    @Bean
     ChatMemoryProvider customerChatMemoryProvider() {
-        return chatId -> MessageWindowChatMemory.withMaxMessages(10);
-    }
-
-    @Bean
-    ChatMemoryProvider protectorChatMemoryProvider() {
-        return chatId -> MessageWindowChatMemory.withMaxMessages(1);
-    }
-
-    @Bean
-    ChatMemoryProvider textCreatorChatMemoryProvider() {
         return chatId -> MessageWindowChatMemory.withMaxMessages(10);
     }
 

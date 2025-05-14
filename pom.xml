@@ -8,10 +8,10 @@
 		<version>3.4.1</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
-	<groupId>com.github.caac.demo</groupId>
-	<artifactId>demo-langchain4j-caac-no-crud</artifactId>
+	<groupId>com.github.forms.demo</groupId>
+	<artifactId>demo-langchain4j-forms</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>demo-langchain4j-caac-no-crud</name>
+	<name>demo-langchain4j-forms</name>
 	<description>Agentic AI Chat as Code Demo for Spring Boot and LangChain4J</description>
 
 	<properties>

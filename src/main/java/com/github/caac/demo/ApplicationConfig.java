@@ -69,7 +69,7 @@ public class ApplicationConfig {
 
     @Bean
     ChatMemoryProvider customerChatMemoryProvider() {
-        return chatId -> MessageWindowChatMemory.withMaxMessages(10);
+        return chatId -> MessageWindowChatMemory.withMaxMessages(100);
     }
 
     @Bean

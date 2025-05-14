@@ -30,8 +30,6 @@ class CustomerAgenticServiceIT {
                     Address: Schönhauser 10, 50968 Köln; 
                     Telephone: 0123456789"; 
                     Email: lofi@lofi.de
-                    
-                    
                 """;
         chatWithAgents = customerAgenticService.chatWithAgents(chatId, userMessage);
         logger.info("*** Response: " + chatWithAgents);
@@ -39,6 +37,7 @@ class CustomerAgenticServiceIT {
         userMessage = """
                 Begin date should be tommorow.
                 Only for me, one person.
+                My age is 30.
                 """;
         chatWithAgents = customerAgenticService.chatWithAgents(chatId, userMessage);
         logger.info("*** Response: " + chatWithAgents);

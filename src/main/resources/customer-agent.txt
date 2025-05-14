@@ -33,14 +33,22 @@
 1. **Personal Details**
 
    * Full Name
-   * Address (in German format)
-   * Phone Number (International format)
+   * Address (in German format) - Validate that:
+      *** The postal code is a 5-digit number.
+      *** The house number and street name are present.
+      *** The postal code matches the city.
+
+   * Phone Number (International format) - Validate that the number:
+      *** Starts with +49 or 0
+      *** Has a valid area code and at least 6–11 digits overall (excluding the country code).
+      *** Accept both mobile and landline formats.
 
 2. **Travel Insurance Details**
 
    * Insurance Start Date (`dd.mm.yyyy`)
    * Number of Persons
-   * Age of Each Person (match number of persons)
+   * Age of Each Person (match number of persons) - Validate that:
+      *** Each age is a number between 0 and 120 years.
 
 ---
 
